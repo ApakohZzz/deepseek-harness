@@ -7,7 +7,8 @@ Windows 下 `dsh web` 的一键启停外壳：后台启动、端口探测、气�
 | 文件 | 作用 |
 |---|---|
 | `dsh-control.ps1` | 核心控制脚本（start / stop / restart / status / log） |
-| `start-dsh.bat` / `stop-dsh.bat` / `status-dsh.bat` | 供快捷方式调用的薄包装 |
+| `update-dsh.ps1` | 一键更新：同步官方 → 合并 my-dsh → 构建 → 重启 |
+| `start-dsh.bat` / `stop-dsh.bat` / `status-dsh.bat` / `update-dsh.bat` | 供快捷方式调用的薄包装 |
 | `make-shortcuts.ps1` | 生成/刷新桌面快捷方式 |
 | `deploy.ps1` | 把本目录脚本部署到外层壳的 `bin/` 并重建快捷方式 |
 | `deepseek.ico` | 快捷方式图标 |
@@ -39,6 +40,15 @@ powershell -NoProfile -ExecutionPolicy Bypass -File dsh-control.ps1 start -Port 
 ```
 
 ## Fork 工作流（本目录维护者适用）
+
+**日常一键**：更新官方进展 + 合并 + 构建 + 重启全自动：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File update-dsh.ps1
+# 官方无更新时秒退；可用 -NoBuild / -NoRestart / -NoBrowser / -NoPush 微调
+```
+
+以下手动命令仅在需要精细控制或向官方发 PR 时使用：
 
 本目录只存在于个人分支 `my-dsh`，不进官方 `master`：
 

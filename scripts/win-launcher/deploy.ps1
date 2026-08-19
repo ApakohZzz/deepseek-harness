@@ -17,7 +17,7 @@ if (-not (Test-Path $TargetBin)) {
   Write-Error "目标目录不存在: $TargetBin（可用 -TargetBin 指定）"
 }
 
-$files = 'dsh-control.ps1', 'start-dsh.bat', 'stop-dsh.bat', 'status-dsh.bat', 'make-shortcuts.ps1', 'deepseek.ico'
+$files = 'dsh-control.ps1', 'start-dsh.bat', 'stop-dsh.bat', 'status-dsh.bat', 'update-dsh.ps1', 'update-dsh.bat', 'make-shortcuts.ps1', 'deepseek.ico'
 foreach ($f in $files) {
   Copy-Item (Join-Path $src $f) $TargetBin -Force
   Write-Host "[OK] $f -> $TargetBin" -ForegroundColor Green

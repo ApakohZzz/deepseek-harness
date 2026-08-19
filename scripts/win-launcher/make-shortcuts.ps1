@@ -20,6 +20,7 @@ function Mk($name, $target) {
 Mk "$linkRoot\Start DeepSeek Harness.lnk"  (Join-Path $bin 'start-dsh.bat')
 Mk "$linkRoot\Stop DeepSeek Harness.lnk"   (Join-Path $bin 'stop-dsh.bat')
 Mk "$linkRoot\Status DeepSeek Harness.lnk" (Join-Path $bin 'status-dsh.bat')
+Mk "$linkRoot\Update DeepSeek Harness.lnk" (Join-Path $bin 'update-dsh.bat')
 
 # Remove legacy shortcut names from the old version of this script
 Remove-Item "$linkRoot\Start dsh.lnk", "$linkRoot\Stop dsh.lnk" -ErrorAction SilentlyContinue
