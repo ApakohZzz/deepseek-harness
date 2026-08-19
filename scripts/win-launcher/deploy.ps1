@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # deploy.ps1 - 将 win-launcher 脚本部署到外层壳的 bin 目录
 # 用法: powershell -NoProfile -ExecutionPolicy Bypass -File deploy.ps1 [-TargetBin <dir>]
 # 默认目标: 仓库根的父目录下的 bin（即外层部署壳）

@@ -1,4 +1,4 @@
-$w = New-Object -ComObject WScript.Shell
+﻿$w = New-Object -ComObject WScript.Shell
 $bin = Split-Path -Parent $MyInvocation.MyCommand.Path   # ...\bin 或 ...\scripts\win-launcher
 $root = Split-Path -Parent $bin                           # shell root or repo root
 $icon = Join-Path $bin 'deepseek.ico'

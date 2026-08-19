@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # update-dsh.ps1 - 一键更新：同步官方 -> 合并 my-dsh -> 构建 -> 重启
 # 用法: powershell -NoProfile -ExecutionPolicy Bypass -File update-dsh.ps1 [-NoBuild] [-NoRestart] [-NoBrowser] [-NoPush]
 # 官方无更新时秒退，不做任何动作
